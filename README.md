@@ -6,28 +6,30 @@ A curated collection of Generative AI mini-projects using **LangChain**, **LLMs*
 
 ## 🚀 Tech Stack
 
-- **LangChain**
-- **LLMs**: OpenAI, CodeLlama, LLaMA3, HuggingFace, Google Gemma2, GROQ
-- **Vector DBs**: FAISS, Chroma, AstraDB
-- **UI**: Streamlit, Gradio
-- **Others**: Python, PyPDF, dotenv, requests
+- 🧠 **LangChain**
+- 🔮 **LLMs**: OpenAI, CodeLlama, LLaMA3, HuggingFace, Google Gemma2, GROQ
+- 🧲 **Vector Databases**: FAISS, Chroma, AstraDB
+- 🖥️ **UI Frameworks**: Streamlit, Gradio
+- 🐍 **Others**: Python, PyPDF, dotenv, requests
+- ⚙️ **CI/CD**: GitHub Actions (Lint + Deploy)
+- ☁️ **Deployment**: AWS (Planned)
 
 ---
 
 ## 🧩 Projects Included
 
-| Project Folder               | Description                                                                 |
-|-----------------------------|-----------------------------------------------------------------------------|
-| `Chat SQL`                  | LangChain SQL chatbot using SQL Toolkit and DB memory                       |
-| `Codellama`                 | Multilingual code assistant using Meta's CodeLlama                          |
-| `Huggingface with Langchain`| HuggingFace-hosted LLMs integrated with LangChain                           |
-| `MathsGPT`                  | Solves math problems using Google Gemma2                                    |
-| `PDF query RAG`             | Queries PDF data using AstraDB + LangChain                                  |
-| `Q and A Chatbot`           | General-purpose chatbot with simple memory                                  |
-| `RAG Document Q&A`          | Document Q&A using GROQ API and LLaMA3                                      |
-| `RAG Q&A Conversation`      | PDF-based conversational chatbot with chat history                          |
-| `Search Engine`             | AI-based search using retrievers and LangChain tools                        |
-| `Text Summarization`        | Summarizes content from YouTube or web using LangChain                      |
+| 📁 Project Folder             | 📝 Description                                                              |
+|------------------------------|-----------------------------------------------------------------------------|
+| `Chat SQL`                   | SQL chatbot using LangChain SQL Toolkit and DB memory                       |
+| `Codellama`                  | Multilingual code assistant using Meta's CodeLlama                          |
+| `Huggingface with Langchain` | Hosted LLMs from Hugging Face integrated with LangChain                    |
+| `MathsGPT`                   | Solves math problems using Google Gemma2                                   |
+| `PDF query RAG`              | RAG system that queries PDF data using AstraDB + LangChain                  |
+| `Q and A Chatbot`            | General-purpose chatbot with simple memory                                 |
+| `RAG Document Q&A`           | Document Q&A with GROQ API and LLaMA3                                       |
+| `RAG Q&A Conversation`       | Conversational chatbot over PDFs with memory context                        |
+| `Search Engine`              | AI-based search engine using LangChain retrievers                          |
+| `Text Summarization`         | Summarizes content from YouTube/web using LangChain                        |
 
 ---
 
@@ -39,30 +41,40 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-> ⚠️ Use separate virtual environments per project for best results.
+> ⚠️ Use a **separate virtual environment** per project to avoid dependency issues.
 
 ---
 
+## 💼 Resume Highlights
 
-
-
-## 📌 Resume Highlights
-
-- Developed 10+ real-world GenAI projects using LangChain, vector DBs, and state-of-the-art LLMs.
-- Implemented custom RAG pipelines, AI chatbots, and summarization tools.
-- Integrated frontends with **Streamlit** and **Gradio** to deploy end-to-end GenAI apps.
+- ✅ Built 10+ GenAI applications using LangChain, vector stores, and multiple LLMs.
+- 🛠️ Customized RAG pipelines, search engines, and multilingual chatbots.
+- 🌐 Integrated UI layers with Streamlit/Gradio for real-time, interactive GenAI apps.
+- ⚙️ Set up GitHub Actions-based CI/CD pipeline with auto-linting and deployment readiness.
 
 ---
 
 ## 🔭 Roadmap
 
-- [ ] Add Dockerfile for containerized deployments
-- [ ] Deploy select apps to HuggingFace Spaces / Streamlit Cloud
-- [ ] Add CI/CD GitHub Actions for auto-deploy
-- [ ] Add tests and improve modularity
+- [✅] ⚙️ CI/CD via GitHub Actions (Lint + Deploy)
+- [✅] 🧹 Linting integration (flake8)
+- [ ] 🐳 Dockerfile for containerized deployment
+- [ ] 🚀 Deploy selected apps to Hugging Face Spaces / AWS EC2 / Streamlit Cloud
+- [ ] 🧪 Unit tests & modularization
+
+---
+
+## 🔗 For Recruiters
+
+> Looking for a **remote-ready ML / GenAI / Full-Stack Engineer** who can build, ship, and deploy?  
+📌 This repo showcases working, production-grade GenAI applications, not toy demos.  
+📫 Let’s connect → [LinkedIn](https://www.linkedin.com/in/aparna-k-628005167/) or [Email](mailto:aparnakrishna246@gmail.com)
 
 ---
 
 ## 📫 Contact
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aparna-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/aparna-k-628005167/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aparna-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/aparna-k-628005167/)  
+[![GitHub](https://img.shields.io/badge/GitHub-Aparna--k246-181717?style=flat&logo=github)](https://github.com/Aparna-k246)
+
+---
