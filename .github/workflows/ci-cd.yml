@@ -1,0 +1,57 @@
+name: CI-CD Pipeline for GenAI Projects
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  ci-cd:
+    name: Lint 🧹 + Deploy 🚀
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install flake8
+        run: pip install flake8
+
+      - name: Run flake8 (Linting Check)
+        run: |
+          echo "Running flake8 linter..."
+          flake8 . --exclude=venv,__pycache__,.ipynb_checkpoints --max-line-length=120
+
+      - name: Install Dependencies (All Subprojects)
+        run: |
+          for project in GENAI-Projects-Langchain Gen-AI_Google-Gemini datascienceproject dockerimagehub Mlflowstarter; do
+            echo "Setting up $project..."
+            cd $project
+            pip install -r requirements.txt || echo "No requirements.txt found in $project"
+            cd ..
+          done
+
+      - name: Deploy to EC2 (via SSH)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/genai-projects/
+            for project in GENAI-Projects-Langchain Gen-AI_Google-Gemini datascienceproject dockerimagehub Mlflowstarter; do
+              echo "Deploying $project"
+              cd $project
+              git pull origin main
+              [ -f requirements.txt ] && pip install -r requirements.txt || echo "No requirements.txt"
+              pkill -f "python main.py" || true
+              pkill -f "python app.py" || true
+              nohup python main.py > output.log 2>&1 & || nohup python app.py > output.log 2>&1 &
+              cd ..
+            done
